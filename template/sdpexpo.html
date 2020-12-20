@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sdpexpo</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='sdpexpo.css')}}">
+    
+</head>
+<body>
+    <h1></h1>
+<div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart8.jpg" alt="Mumbai Indians">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart7.jpg" alt="Sunrisers Hyderabad">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart6.jpg" alt="Royal Challengers Bangalore">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart5.jpg" alt="Delhi Capitals">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart4.jpg" alt="Rajasthan Royals">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart3.jpg" alt="Kolkata Knight Riders">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart2.jpg" alt="Kings XI Punjab">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart1.jpg" alt="Chennai Super Kings">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Prediction Form -->
+            <div class="box">
+  <h1>Heart Disease Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <div class="input-container">
+      <input type="text" name="Age"  placeholder="Age" required="required" />
+      </div>
+      <div class="input-container">
+      <input type="text" name="Gender"  placeholder="Gender" required="required" />
+  </div>
+
+
+      <div class="input-container">
+      <input type="text" name="cp"  placeholder="cp" required="required" />
+  </div>
+        <div class="input-container">
+      <input type="text" name="Trestbps"  placeholder="Trestbps" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="cholestrol"  placeholder="cholestrol" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="Fbs"  placeholder="Fbs" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="Rest ECG"  placeholder="Rest ECG" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="thalach"  placeholder="thalach" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="Exang"  placeholder="Exang" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="Oldpeak"  placeholder="Oldpeak" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="Slope"  placeholder="Slope" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="Ca"  placeholder="Ca" required="required" />
+  </div>
+  <div class="input-container">
+      <input type="text" name="thal"  placeholder="thal" required="required" />
+  </div>
+      
+
+
+      <button type="Submit" class="btn">predict</button>
+        <a type="submit">Predict</a> 
+        
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+        <!--
+		<a type="button" href="file:///C:/Users/Jay%20Gajanan/Documents/python/flask/SDP/sdpexposubmit.html">Submit</a>		
+        <a type="button"  href="file:///C:/Users/Jay%20Gajanan/Documents/HTML/blog.html">Know</a>*/
+        -->
+
+
+
+
+            <!-- IPL Banner - 2 -->
+            <div class='ipl-banner-right'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-down">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart1.jpg" alt="Mumbai Indians">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart2.jpg" alt="Sunrisers Hyderabad">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart3.jpg" alt="Royal Challengers Bangalore">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart4.jpg" alt="Delhi Capitals">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart5.jpg" alt="Kolkata Knight Riders">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart6.jpg" alt="Rajasthan Royals">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart7.jpg" alt="Kings XI Punjab">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="heart8.jpg" alt="Chennai Super Kings">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Footer--> 
+      
+		
+        </div>
+
+        <!-- Footer 
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/anujvyas/IPL-First-Innings-Score-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/anujkvyas"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Mehul.</p>
+       </div>
+		-->
+</body>
+</html>
